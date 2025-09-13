@@ -84,7 +84,7 @@ compliance/
 **Current State**: No python.ver file  
 **Required**: Python version specification for consistency  
 **Gap**: Missing version management  
-**Expected**: `python.ver` containing "3.11"
+**Expected**: `python.ver` containing "3.12"
 
 #### 4. **Dependency Management**  
 **Current State**: No requirements files  
@@ -198,7 +198,7 @@ configs/
 #### Step 1: Create Basic Module Structure
 1. **Create python.ver file**:
    ```bash
-   echo "3.11" > python.ver
+   echo "3.12" > python.ver
    ```
 
 2. **Create requirements files**:
