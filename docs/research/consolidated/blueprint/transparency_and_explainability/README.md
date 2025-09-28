@@ -16,7 +16,7 @@ The following is a unified process for achieving transparency and explainability
     *   Provide clear instructions for use.
     *   Explain how the AI system makes decisions in a way that is understandable to the target audience.
 *   **Traces:**
-    *   [EU AI Act: Transparency and Provision of Information to Deployers](../../eu_ai_act/high_risk_ai_systems/requirements/transparency_and_information_for_deployers/)
+    *   [EU AI Act: Transparency and Provision of Information to Deployers](../../EU_AI_Act/high_risk_ai_systems/requirements/transparency_and_information_for_deployers/)
     *   [NIST AI RMF: Govern](../../nist_ai_rmf/govern/)
 
 ### 2. Document the System
@@ -27,7 +27,7 @@ The following is a unified process for achieving transparency and explainability
     *   Document the data used to train, validate, and test the system.
     *   Document the performance of the system.
 *   **Traces:**
-    *   [EU AI Act: Technical Documentation](../../eu_ai_act/high_risk_ai_systems/requirements/technical_documentation/)
+    *   [EU AI Act: Technical Documentation](../../EU_AI_Act/high_risk_ai_systems/requirements/technical_documentation/)
     *   [NIST AI RMF: Map](../../nist_ai_rmf/map/)
 
 ### 3. Keep Records
@@ -37,6 +37,6 @@ The following is a unified process for achieving transparency and explainability
     *   Log events relevant for identifying risks and monitoring the system.
     *   Ensure the traceability of the system's functioning.
 *   **Traces:**
-    *   [EU AI Act: Record-Keeping](../../eu_ai_act/high_risk_ai_systems/requirements/record_keeping/)
+    *   [EU AI Act: Record-Keeping](../../EU_AI_Act/high_risk_ai_systems/requirements/record_keeping/)
     *   [NIST AI RMF: Measure](../../nist_ai_rmf/measure/)
 

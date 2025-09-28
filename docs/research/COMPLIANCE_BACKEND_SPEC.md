@@ -61,7 +61,7 @@ compliance/backend/
 - Control models should capture:
   - `control_id` (e.g., `"ISO27001-6.1.3"`)
   - `title`
-  - `source_standard` (enum covering EU_AI_ACT, ISO_42001, ISO_27001, NIST_AI_RMF, Blueprint)
+  - `source_standard` (enum covering EU_AI_Act, ISO_42001, ISO_27001, NIST_AI_RMF, Blueprint)
   - `requirement_summary`
   - `implementation_status` (enum: `NOT_STARTED`, `IN_PROGRESS`, `OPERATIONAL`, `EVIDENCE_REQUIRED`)
   - `evidence_refs: list[EvidenceRef]`

@@ -4,25 +4,25 @@ This document provides a consolidated view of the key compliance standards and f
 
 ## EU AI Act
 
-*   **[Prohibited AI Practices](./eu_ai_act/prohibited_practices/)**
-    *   [Subliminal Techniques](./eu_ai_act/prohibited_practices/subliminal_techniques.md)
-    *   [Exploiting Vulnerabilities](./eu_ai_act/prohibited_practices/exploiting_vulnerabilities.md)
-    *   [Social Scoring](./eu_ai_act/prohibited_practices/social_scoring.md)
-    *   [Risk Assessments for Criminal Offences](./eu_ai_act/prohibited_practices/risk_assessment_criminal_offences.md)
-    *   [Creating or Expanding Facial Recognition Databases](./eu_ai_act/prohibited_practices/facial_recognition_databases.md)
-    *   [Inferring Emotions in Workplace and Education](./eu_ai_act/prohibited_practices/inferring_emotions_workplace_education.md)
-    *   [Biometric Categorisation Based on Sensitive Attributes](./eu_ai_act/prohibited_practices/biometric_categorisation_sensitive_attributes.md)
-    *   [Real-Time Remote Biometric Identification for Law Enforcement](./eu_ai_act/prohibited_practices/real_time_remote_biometric_identification.md)
-*   **[High-Risk AI Systems](./eu_ai_act/high_risk_ai_systems/)**
-    *   [Classification Rules](./eu_ai_act/high_risk_ai_systems/classification_rules/classification_rules.md)
+*   **[Prohibited AI Practices](./EU_AI_Act/prohibited_practices/)**
+    *   [Subliminal Techniques](./EU_AI_Act/prohibited_practices/subliminal_techniques.md)
+    *   [Exploiting Vulnerabilities](./EU_AI_Act/prohibited_practices/exploiting_vulnerabilities.md)
+    *   [Social Scoring](./EU_AI_Act/prohibited_practices/social_scoring.md)
+    *   [Risk Assessments for Criminal Offences](./EU_AI_Act/prohibited_practices/risk_assessment_criminal_offences.md)
+    *   [Creating or Expanding Facial Recognition Databases](./EU_AI_Act/prohibited_practices/facial_recognition_databases.md)
+    *   [Inferring Emotions in Workplace and Education](./EU_AI_Act/prohibited_practices/inferring_emotions_workplace_education.md)
+    *   [Biometric Categorisation Based on Sensitive Attributes](./EU_AI_Act/prohibited_practices/biometric_categorisation_sensitive_attributes.md)
+    *   [Real-Time Remote Biometric Identification for Law Enforcement](./EU_AI_Act/prohibited_practices/real_time_remote_biometric_identification.md)
+*   **[High-Risk AI Systems](./EU_AI_Act/high_risk_ai_systems/)**
+    *   [Classification Rules](./EU_AI_Act/high_risk_ai_systems/classification_rules/classification_rules.md)
     *   **Requirements**
-        *   [Risk Management System](./eu_ai_act/high_risk_ai_systems/requirements/risk_management_system/risk_management_system.md)
-        *   [Data and Data Governance](./eu_ai_act/high_risk_ai_systems/requirements/data_and_data_governance/data_and_data_governance.md)
-        *   [Technical Documentation](./eu_ai_act/high_risk_ai_systems/requirements/technical_documentation/technical_documentation.md)
-        *   [Record-Keeping](./eu_ai_act/high_risk_ai_systems/requirements/record_keeping/record_keeping.md)
-        *   [Transparency and Provision of Information to Deployers](./eu_ai_act/high_risk_ai_systems/requirements/transparency_and_information_for_deployers/transparency_and_information_for_deployers.md)
-        *   [Human Oversight](./eu_ai_act/high_risk_ai_systems/requirements/human_oversight/human_oversight.md)
-        *   [Accuracy, Robustness and Cybersecurity](./eu_ai_act/high_risk_ai_systems/requirements/accuracy_robustness_cybersecurity/accuracy_robustness_cybersecurity.md)
+        *   [Risk Management System](./EU_AI_Act/high_risk_ai_systems/requirements/risk_management_system/risk_management_system.md)
+        *   [Data and Data Governance](./EU_AI_Act/high_risk_ai_systems/requirements/data_and_data_governance/data_and_data_governance.md)
+        *   [Technical Documentation](./EU_AI_Act/high_risk_ai_systems/requirements/technical_documentation/technical_documentation.md)
+        *   [Record-Keeping](./EU_AI_Act/high_risk_ai_systems/requirements/record_keeping/record_keeping.md)
+        *   [Transparency and Provision of Information to Deployers](./EU_AI_Act/high_risk_ai_systems/requirements/transparency_and_information_for_deployers/transparency_and_information_for_deployers.md)
+        *   [Human Oversight](./EU_AI_Act/high_risk_ai_systems/requirements/human_oversight/human_oversight.md)
+        *   [Accuracy, Robustness and Cybersecurity](./EU_AI_Act/high_risk_ai_systems/requirements/accuracy_robustness_cybersecurity/accuracy_robustness_cybersecurity.md)
 
 ## NIST AI Risk Management Framework (AI RMF)
 

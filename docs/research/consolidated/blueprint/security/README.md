@@ -25,7 +25,7 @@ The following is a unified process for ensuring the security of AI systems that 
 *   **Activities:**
     *   Implement measures to prevent, detect, and respond to attacks such as data poisoning, model poisoning, and adversarial examples.
 *   **Traces:**
-    *   [EU AI Act: Accuracy, Robustness and Cybersecurity](../../eu_ai_act/high_risk_ai_systems/requirements/accuracy_robustness_cybersecurity/)
+    *   [EU AI Act: Accuracy, Robustness and Cybersecurity](../../EU_AI_Act/high_risk_ai_systems/requirements/accuracy_robustness_cybersecurity/)
 
 ### 3. Follow a Secure Development Lifecycle
 

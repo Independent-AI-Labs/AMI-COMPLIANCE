@@ -1,7 +1,5 @@
 # Compliance Module Research Artifacts
 
-This directory keeps historical reports and requirement breakdowns that do not
-reflect the current Base-aligned implementation. Configuration stubs (e.g.
-legacy `requirements.txt`, `.ini` files) have been removed to avoid confusion.
-Use the remaining documents strictly as background research; promote material
-back into `compliance/docs/` only after it matches the live codebase.
+This archive preserves the deep dives that shaped AMI’s governance approach—sector scans, standards mappings, and architectural experiments. Treat it as the knowledge base for future compliance features rather than production documentation.
+
+Configuration stubs (e.g. legacy `requirements.txt`, `.ini` files) have been removed to avoid confusion. Use the remaining documents strictly as background research; promote material back into `compliance/docs/` only after it matches the live codebase.

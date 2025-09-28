@@ -13,7 +13,7 @@ This document captures the authoritative compliance requirements for AMI-ORCHEST
 
 | Framework | Canonical Source | Consolidated Docs | Implementation Snapshot |
 |-----------|-----------------|-------------------|-------------------------|
-| **EU AI Act (Regulation 2024/1689)** | EUR-Lex 32024R1689 | `consolidated/eu_ai_act/**` | Logging & audit trail implemented in `/base` (`audit_trail.py`); deployer/provider obligations tracked in docs; dedicated deployer tooling pending in `compliance/backend`. |
+| **EU AI Act (Regulation 2024/1689)** | EUR-Lex 32024R1689 | `consolidated/EU_AI_Act/**` | Logging & audit trail implemented in `/base` (`audit_trail.py`); deployer/provider obligations tracked in docs; dedicated deployer tooling pending in `compliance/backend`. |
 | **ISO/IEC 42001:2023 (AIMS)** | ISO Catalogue 81230 | `consolidated/ISO_42001/**` | Context/support/performance/improvement clauses mapped; operational controls will be surfaced through the compliance backend services. |
 | **ISO/IEC 27001:2022 (ISMS)** | ISO Catalogue 82875 | `consolidated/ISO_27001/**` | Base module supplies ISMS primitives (RBAC, audit, storage controls). Risk treatment approvals and evidence tracking must be implemented in `compliance/backend`. |
 | **NIST AI RMF 1.0** | NIST AI.100-1 | `consolidated/NIST_AI_RMF/**` | Governance/Map/Measure text consolidated; tooling to expose RMF posture is part of the Compliance MCP roadmap. |

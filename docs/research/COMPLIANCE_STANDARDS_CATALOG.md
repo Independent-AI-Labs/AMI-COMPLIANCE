@@ -8,7 +8,7 @@ This catalog summarises the primary standards informing AMI-ORCHESTRATOR. The de
 *   **Official Link:** [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689)
 *   **PDF Link:** [https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024R1689)
 *   **Summary:** Harmonised rules for AI systems, including classification (Annex III), provider/deployer obligations (Articles 16-30), risk management (Article 9), logging (Article 12), transparency (Article 52) and post-market monitoring (Articles 72-73).
-*   **Consolidated Breakdown:** `consolidated/eu_ai_act/high_risk_ai_systems/**`
+*   **Consolidated Breakdown:** `consolidated/EU_AI_Act/high_risk_ai_systems/**`
 
 ## ISO/IEC 9001
 

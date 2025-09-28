@@ -15,7 +15,7 @@ The following is a unified process for implementing human oversight that integra
     *   Design appropriate human-machine interface tools.
     *   Implement mechanisms to allow for human intervention (e.g., a 'stop' button).
 *   **Traces:**
-    *   [EU AI Act: Human Oversight](../../eu_ai_act/high_risk_ai_systems/requirements/human_oversight/)
+    *   [EU AI Act: Human Oversight](../../EU_AI_Act/high_risk_ai_systems/requirements/human_oversight/)
     *   [NIST AI RMF: Govern](../../nist_ai_rmf/govern/)
 
 ### 2. Empower Human Overseers
@@ -26,6 +26,6 @@ The following is a unified process for implementing human oversight that integra
     *   Raise awareness of automation bias.
     *   Ensure that overseers have the authority to disregard, override, or reverse the output of the AI system.
 *   **Traces:**
-    *   [EU AI Act: Human Oversight](../../eu_ai_act/high_risk_ai_systems/requirements/human_oversight/)
+    *   [EU AI Act: Human Oversight](../../EU_AI_Act/high_risk_ai_systems/requirements/human_oversight/)
     *   [NIST AI RMF: Govern](../../nist_ai_rmf/govern/)
 
