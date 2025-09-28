@@ -1,0 +1,12 @@
+{
+  "id": "ami-trigger-mg3il9xj-005",
+  "name": "DOM Trigger",
+  "enabled": true,
+  "notes": "",
+  "targetCode": "return context.element || context.document.body;",
+  "conditionCode": "return true;",
+  "actionCode": "console.log(\"Automation trigger fired\", context);",
+  "type": "dom",
+  "scenario": "default",
+  "updatedAt": 1759052752403
+}

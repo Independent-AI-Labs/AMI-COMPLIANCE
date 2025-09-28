@@ -1,0 +1,12 @@
+{
+  "id": "ami-trigger-mg3ilnhl-007",
+  "name": "Plugin Trigger",
+  "enabled": true,
+  "notes": "Invokes an automation plugin handler when the trigger fires.",
+  "targetCode": "return context.document;",
+  "conditionCode": "return true;",
+  "actionCode": "if (context.manager?.invokePlugin) {\n  Promise.resolve(context.manager.invokePlugin('examplePlugin', context)).catch((error) => {\n    console.error('Automation plugin error', error);\n  });\n} else {\n  console.warn('No plugin bridge available for automation trigger.', context);\n}",
+  "type": "plugin",
+  "scenario": "default",
+  "updatedAt": 1759052769957
+}

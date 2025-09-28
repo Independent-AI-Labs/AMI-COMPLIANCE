@@ -16,7 +16,7 @@ The following is a unified data governance process that integrates the requireme
     *   Identify and document the origin of the data (provenance).
     *   Ensure that data collection practices are fair and do not introduce bias.
 *   **Traces:**
-    *   [EU AI Act: Data and Data Governance](../../eu_ai_act/high_risk_ai_systems/requirements/data_and_data_governance/)
+    *   [EU AI Act: Data and Data Governance](../../EU_AI_Act/high_risk_ai_systems/requirements/data_and_data_governance/)
     *   [ISO/IEC 42001: Annex A.7.3 Data acquisition](../../iso_42001/operation/)
 
 ### 2. Data Preparation and Quality
@@ -27,7 +27,7 @@ The following is a unified data governance process that integrates the requireme
     *   Assess the quality of the data.
     *   Identify and mitigate biases in the data.
 *   **Traces:**
-    *   [EU AI Act: Data and Data Governance](../../eu_ai_act/high_risk_ai_systems/requirements/data_and_data_governance/)
+    *   [EU AI Act: Data and Data Governance](../../EU_AI_Act/high_risk_ai_systems/requirements/data_and_data_governance/)
     *   [ISO/IEC 42001: Annex A.7.5 Data preparation](../../iso_42001/operation/)
     *   [ISO/IEC 42001: Annex A.7.4 Quality of data for AI systems](../../iso_42001/operation/)
 

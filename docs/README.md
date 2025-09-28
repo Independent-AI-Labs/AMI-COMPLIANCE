@@ -1,9 +1,15 @@
 # Compliance Module Overview
 
-The `compliance` module currently ships documentation only. Runtime controls, audit trails,
-and storage orchestration all live in `/base`; this directory now summarizes how current
-code quality and CI/DI (continuous integration / delivery & inspection) safeguards line up
-with that shared infrastructure.
+Compliance captures how AMI turns governance theory into operational guardrails. Even before the runtime backend lands, this documentation shows teams what standards we cover, how evidence should flow, and where the gaps remain.
+
+## What Exists
+- **Static Guidance** – `CODE_QUALITY_ISSUES.md` (module root) tracks lint/type gaps picked
+  up by the shared pre-commit hooks (ruff, mypy, pytest). No bespoke linters remain here.
+- **CI/DI Alignment** – The orchestrator GitHub workflows run `python scripts/run_tests.py`,
+  which delegates into module-level runners. Compliance inherits the same checks by design;
+  no additional pipelines are defined in this module.
+- **Environment Contract** – `module_setup.py` delegates to Base `EnvironmentSetup` so any
+  future backend code automatically reuses uv virtualenv provisioning and hook installation.
 
 ## What Exists
 - **Static Guidance** – `CODE_QUALITY_ISSUES.md` (module root) tracks lint/type gaps picked
@@ -30,4 +36,3 @@ Legacy requirement breakdowns, standards digests, and the compliance backend spe
 moved into `./research/`. These documents document historical analysis and should be treated as
 reference material until the backend is implemented. Update them only when converting the
 research into shippable code that conforms to Base patterns.
-

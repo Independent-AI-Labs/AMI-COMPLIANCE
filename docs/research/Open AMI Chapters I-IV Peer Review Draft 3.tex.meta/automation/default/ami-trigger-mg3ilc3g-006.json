@@ -1,0 +1,12 @@
+{
+  "id": "ami-trigger-mg3ilc3g-006",
+  "name": "Network Trigger",
+  "enabled": true,
+  "notes": "Automatically fetches network data when the trigger fires.",
+  "targetCode": "return context.window || globalThis;",
+  "conditionCode": "return true;",
+  "actionCode": "fetch('/api/example', { method: 'GET' })\n  .then((response) => response.json())\n  .then((data) => {\n    console.log('Network automation result', data, context);\n  })\n  .catch((error) => {\n    console.error('Network automation failed', error);\n  });",
+  "type": "network",
+  "scenario": "default",
+  "updatedAt": 1759052755192
+}
