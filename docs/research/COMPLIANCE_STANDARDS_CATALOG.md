@@ -1,6 +1,6 @@
 # Compliance Standards Catalog
 
-This catalog summarises the primary standards informing AMI-ORCHESTRATOR. The detailed breakdowns live in `compliance/docs/consolidated/`. Use this file as a quick reference; follow the links to the consolidated Markdown for interpretations and clause-level coverage.
+This catalog summarises the primary standards informing AMI-ORCHESTRATOR. The detailed breakdowns live in `compliance/docs/research/consolidated/`. Use this file as a quick reference; follow the links to the consolidated Markdown for interpretations and clause-level coverage.
 
 ## EU AI Act
 
@@ -60,6 +60,32 @@ This catalog summarises the primary standards informing AMI-ORCHESTRATOR. The de
 *   **Summary:** Voluntary framework covering Govern, Map, Measure, Manage functions for AI risk.
 *   **Consolidated Breakdown:** `consolidated/NIST_AI_RMF/**`
 
+## EU General Data Protection Regulation (GDPR)
+
+*   **Full Title:** Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data
+*   **Official Link:** [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679)
+*   **PDF Link:** [https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679)
+*   **Summary:** Comprehensive data protection law regulating the processing of personal data, including principles, rights, obligations, and enforcement mechanisms.
+*   **Consolidated Breakdown:** `consolidated/EU_GDPR/**`
+
+## UK GDPR and Data Protection Act 2018
+
+*   **Full Title:** UK GDPR (retained EU Regulation 2016/679) and Data Protection Act 2018
+*   **Official Link (DPA 2018):** [https://www.legislation.gov.uk/ukpga/2018/12/contents](https://www.legislation.gov.uk/ukpga/2018/12/contents)
+*   **ICO Guidance:** [https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/)
+*   **Summary:** UK's post-Brexit data protection framework combining retained EU GDPR with UK-specific provisions, exemptions, and regulatory approach.
+*   **Key Differences:** Age 13 for consent, immigration exemptions, broader research definition, ICO-specific codes of practice
+*   **Consolidated Breakdown:** `consolidated/UK_GDPR/**`
+
+## Australian AI Ethics Framework
+
+*   **Full Title:** Australia's Artificial Intelligence Ethics Framework
+*   **Published By:** CSIRO's Data61 (2019), Department of Industry, Science and Resources
+*   **Official Link:** [https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-principles](https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-principles)
+*   **2024 Assurance Framework:** [National Framework for the Assurance of AI in Government](https://www.finance.gov.au/government/public-data/data-and-digital-ministers-meeting/national-framework-assurance-artificial-intelligence-government)
+*   **Summary:** Eight voluntary principles for responsible AI: wellbeing, human-centred values, fairness, privacy/security, reliability/safety, transparency/explainability, contestability, accountability
+*   **Consolidated Breakdown:** `consolidated/Australian_AI_Ethics/**`
+
 ---
 
-For clause-level requirements, controls, and cross-links to ISO/IEC 27001 Annex A, refer to the consolidated Markdown files. Updates to this catalog should occur whenever new standards are onboarded or existing ones change edition.
+For clause-level requirements, controls, and cross-links between standards, refer to the consolidated Markdown files. Updates to this catalog should occur whenever new standards are onboarded or existing ones change edition.
