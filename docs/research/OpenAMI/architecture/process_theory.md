@@ -23,7 +23,7 @@ This chapter condenses the theoretical constructs from the Open AMI report and l
 ## Guidance Functions
 
 - Formal constraints that steer agent behaviour within the Compliance Manifest and mirror guardrail concepts in the NIST AI Risk Management Framework.[^nist-ai-rmf]
-- Implementation placeholder: compliance backend `guidance_service.py` to emit guard rails for orchestrated agents (**Research**).
+- Future implementation: compliance backend `guidance_service.py` to emit guard rails for orchestrated agents (**Research**).
 
 ## Emotional and Contextual Metadata
 

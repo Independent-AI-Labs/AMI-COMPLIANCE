@@ -114,7 +114,7 @@ Processing lawful only if at least one applies:
 ### For AI Training Data
 1. **Purpose Specification**
    - Document specific AI training purposes
-   - Ensure compatibility with original collection purposes
+   - Ensure alignment with original collection purposes
    - Consider scientific research exemption applicability
 
 2. **Data Minimisation in ML**

@@ -1,7 +1,7 @@
 # Open AMI Research Dossier
 
 The Open AMI framework is a theoretical blueprint for delivering demonstrably trustworthy AI/ML systems, grounded in current regulatory and governance expectations.[^eu-ai-act][^nist-ai-rmf][^winfield]
-This dossier replaces the legacy LaTeX draft and restructures the content into maintainable Markdown summaries that align with:
+This dossier replaces the previous LaTeX draft and restructures the content into maintainable Markdown summaries that align with:
 
 - Consolidated regulatory research (`compliance/docs/research/consolidated/`), including EU AI Act, ISO/IEC 27001, and ISO/IEC 42001 obligations.
 - Active and planned components inside the AMI-Orchestrator codebase (see `integration/codebase_alignment.md`).

@@ -26,7 +26,7 @@ This analysis reflects the post-consolidation view of regulatory requirements an
 - **Evidence Traceability:** Consolidated docs reference evidence expectations, but there is no structured storage or link to Git commits/logs. Addressed by `EvidenceService` (Sprint 3).
 - **Control Catalogue Governance:** No seed process for importing consolidated control lists into runtime data. Requires loader during backend scaffolding.
 - **Module Status Reporting:** `CURRENT_IMPLEMENTATION_STATUS.md` manually curated; needs automation via MCP server once backend exists.
-- **Obsolete Docs:** Legacy references to non-existent validators removed; remaining documents updated to point to `compliance/backend` spec.
+- **Obsolete Docs:** Historical references to non-existent validators removed; remaining documents updated to point to `compliance/backend` spec.
 
 ---
 
@@ -34,7 +34,7 @@ This analysis reflects the post-consolidation view of regulatory requirements an
 
 | Sprint | Focus | Key Deliverables | Dependencies |
 |--------|-------|------------------|--------------|
-| Sprint 1 | Backend scaffolding | `compliance/backend` package, config, models, DAO stubs, control catalogue loader | Consolidated docs ready (done) |
+| Sprint 1 | Backend scaffolding | `compliance/backend` package, config, models, DAO skeletons, control catalogue loader | Consolidated docs ready (done) |
 | Sprint 2 | MCP MVP | `compliance_server.py` (`get_control`, `list_gaps`), integration with Base audit logging | Backend scaffolding |
 | Sprint 3 | Evidence & Risk | `EvidenceService`, `submit_evidence`, risk lifecycle + Article 73 tracking | Sprint 2 tools |
 | Sprint 4 | Audit packet + automation | `export_audit_packet`, SoA/risk approval workflows, automated status updates | Evidence + risk services |
