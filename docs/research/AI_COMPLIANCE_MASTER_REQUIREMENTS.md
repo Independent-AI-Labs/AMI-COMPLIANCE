@@ -67,7 +67,7 @@ Supporting standards (ISO/IEC 23894, ISO/IEC 23053, etc.) are catalogued in `COM
 
 The following backlog items anchor our execution. Full details live in `COMPLIANCE_GAP_ANALYSIS.md` and `EXECUTIVE_ACTION_PLAN.md`.
 
-1. **Backend Scaffolding (Sprint 1)** – Create `compliance/backend/` package, config, and model stubs.
+1. **Backend Scaffolding (Sprint 1)** – Create `compliance/backend/` package, config, and model skeletons.
 2. **Control Catalogue Loader** – Parse consolidated docs to seed control definitions (ISO 42001, ISO 27001, EU AI Act obligations, Blueprint controls).
 3. **MCP Server MVP** – Implement `compliance_server.py` with `get_control` + `list_gaps` tools backed by static data.
 4. **Evidence Workflow** – Deliver `submit_evidence` + audit logging integration.

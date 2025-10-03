@@ -32,7 +32,7 @@ Compliance captures how AMI turns governance theory into operational guardrails.
    after real backend code exists.
 
 ## Research Archive
-Legacy requirement breakdowns, standards digests, and the compliance backend spec have been
+Historical requirement breakdowns, standards digests, and the compliance backend spec have been
 moved into `./research/`. These documents document historical analysis and should be treated as
 reference material until the backend is implemented. Update them only when converting the
 research into shippable code that conforms to Base patterns.
