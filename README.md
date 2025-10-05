@@ -448,7 +448,7 @@ See [CURRENT_IMPLEMENTATION_STATUS.md](docs/research/CURRENT_IMPLEMENTATION_STAT
    - Unit tests for all services
    - Integration tests for MCP tools
    - Contract tests for OpenAMI primitives (axioms, CSTs, SPNs)
-   - Mock Lean/Coq for CI/CD
+   - Stub Lean/Coq verification for CI/CD
 
 ### For Compliance Experts
 

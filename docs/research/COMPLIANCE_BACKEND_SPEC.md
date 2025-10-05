@@ -699,7 +699,7 @@ class Incident(BaseModel):
     - Contract tests for MCP tools
     - Repository/service layer tests
     - **OpenAMI additions**:
-      - Layer 0 Axiom validation tests (with mock Lean/Coq)
+      - Layer 0 Axiom validation tests (with stub Lean/Coq verification)
       - CST chain integrity tests
       - SPN wrapper compliance tests
       - Never-Jettison verification tests
@@ -843,7 +843,7 @@ class Incident(BaseModel):
     - Generate sample audit packets for all frameworks
     - Prepare evidence bundles
     - Document compliance architecture for auditors
-    - Conduct dry-run with mock auditor
+    - Conduct dry-run with simulated auditor
     - **Deliverable**: Audit-ready compliance system
 
 ### Success Criteria
