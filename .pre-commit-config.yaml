@@ -22,12 +22,18 @@ repos:
         require_serial: true
         stages: [ pre-commit ]
         pass_filenames: false
+      # - id: no-lint-suppressions
+      #   name: no-lint-suppressions
+      #   entry: bash -c "cd .. && .venv/bin/python scripts/list_noqas.py compliance"
+      #   language: system
+      #   pass_filenames: false
+      #   stages: [ pre-commit ]
 
   - repo: local
     hooks:
       - id: pytest
         name: pytest
-        entry: bash -lc 'if [ -f scripts/run_tests.py ]; then python3 scripts/run_tests.py; else echo "Skipping compliance tests (no runner)"; fi'
+        entry: bash -c 'if [ -f scripts/run_tests.py ]; then .venv/bin/python scripts/run_tests.py; else echo "Skipping compliance tests (no runner)"; fi'
         language: system
         pass_filenames: false
         always_run: true
