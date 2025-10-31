@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# ami-audit: Comprehensive audit trail system CLI
+# Wrapper for compliance/scripts/audit_cli.py
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+MODULE_DIR="$(dirname "$SCRIPT_DIR")"
+ROOT_DIR="$(dirname "$MODULE_DIR")"
+
+# Use compliance module venv
+VENV_PYTHON="$MODULE_DIR/.venv/bin/python"
+
+if [ ! -x "$VENV_PYTHON" ]; then
+    echo "Error: Compliance module venv not found at $VENV_PYTHON" >&2
+    echo "Run: uv run --python 3.12 --project compliance python module_setup.py" >&2
+    exit 1
+fi
+
+# Execute audit CLI
+exec "$VENV_PYTHON" "$SCRIPT_DIR/audit_cli.py" "$@"

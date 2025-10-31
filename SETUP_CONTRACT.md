@@ -1,4 +1,4 @@
-# Compliance Module — Setup Contract
+# Compliance Module - Setup Contract
 
 Status
 - This module currently has no `module_setup.py` and no application package imports that require a local venv.
