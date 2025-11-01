@@ -1,7 +1,7 @@
 """Context manager for scoped audit collection."""
 
 import asyncio
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any
 
 from loguru import logger
@@ -53,7 +53,7 @@ class AuditContext:
         self.store = store or AuditStore()
 
         # Runtime data
-        self.start_time = datetime.utcnow()
+        self.start_time = datetime.now(UTC)
         self.context: dict[str, Any] = {}
         self.metadata: dict[str, Any] = {}
         self.findings: list[AuditFinding] = []
@@ -78,7 +78,7 @@ class AuditContext:
             self.metadata["error_message"] = str(exc_val)
 
         # Calculate duration
-        duration_ms = (datetime.utcnow() - self.start_time).total_seconds() * 1000
+        duration_ms = (datetime.now(UTC) - self.start_time).total_seconds() * 1000
         self.metadata["duration_ms"] = duration_ms
 
         # Create and commit record if enabled
@@ -107,7 +107,7 @@ class AuditContext:
             self.metadata["error_message"] = str(exc_val)
 
         # Calculate duration
-        duration_ms = (datetime.utcnow() - self.start_time).total_seconds() * 1000
+        duration_ms = (datetime.now(UTC) - self.start_time).total_seconds() * 1000
         self.metadata["duration_ms"] = duration_ms
 
         # Create and commit record if enabled

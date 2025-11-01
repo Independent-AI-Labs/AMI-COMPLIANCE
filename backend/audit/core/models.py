@@ -3,7 +3,7 @@
 import hashlib
 import json
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 from typing import Any
 
@@ -105,7 +105,7 @@ class AuditRecord(BaseModel):
     record_hash: str = ""
 
     # Provenance metadata
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
     actor: str  # Who performed the action
     action: str  # What action was performed
     target: str  # What was targeted
@@ -212,7 +212,7 @@ class AuditRecord(BaseModel):
             signer=signer,
             signature=signature,
             algorithm="Ed25519",
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(UTC),
         )
 
         # Create new list with added signature (since frozen)

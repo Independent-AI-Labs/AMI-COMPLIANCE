@@ -1,7 +1,7 @@
 """Tests for core audit trail components."""
 
 import asyncio
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 
 import pytest
 from compliance.backend.audit.core import (
@@ -149,7 +149,7 @@ class TestAuditChain:
     @pytest.mark.asyncio
     async def test_get_chain_slice(self, chain: AuditChain) -> None:
         """Test getting a time slice of the chain."""
-        start_time = datetime.utcnow()
+        start_time = datetime.now(UTC)
 
         # Add records
         for i in range(3):
@@ -163,7 +163,7 @@ class TestAuditChain:
             await chain.add_record(record)
             await asyncio.sleep(0.01)  # Small delay
 
-        end_time = datetime.utcnow()
+        end_time = datetime.now(UTC)
 
         # Get slice
         records = chain.get_chain_slice(start_time, end_time)
@@ -436,7 +436,7 @@ class TestAuditFilter:
 
     def test_filter_time_range(self) -> None:
         """Test filtering by time range."""
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         record = AuditRecord(
             actor="test_user",
             action="test_action",
