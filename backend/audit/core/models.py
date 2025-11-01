@@ -55,7 +55,7 @@ class AuditSignature(BaseModel):
     signer: str
     signature: str
     algorithm: str = "Ed25519"
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
     class Config:
         """Pydantic config."""
