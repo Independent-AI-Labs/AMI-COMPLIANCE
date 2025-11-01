@@ -60,6 +60,8 @@ class AuditChain:
         # Link to previous record
         latest = self.get_latest_record()
         object.__setattr__(record, "previous_hash", latest.record_hash)
+        # Recalculate hash after updating previous_hash
+        object.__setattr__(record, "record_hash", record.calculate_hash())
 
         # Mine the record (proof-of-work)
         record.mine_block(self.difficulty)
