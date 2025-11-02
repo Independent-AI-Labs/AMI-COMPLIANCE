@@ -1,30 +1,31 @@
 # Compliance Module
 
-**Version**: 2.0 (OpenAMI Architecture Integrated)
-**Status**: 📋 Specification Phase → 🛠️ Implementation Starting Q4 2025
+**Status**: 📋 Research & Documentation Phase
 **Owner**: Compliance Working Group
+
+> **⚠️ STATUS**: This module contains compliance research and regulatory mappings. Most advanced features described are theoretical. Current production capability: audit trail at `base/backend/dataops/security/audit_trail.py`.
 
 ---
 
 ## Overview
 
-The **Compliance Module** implements **Layer 4: Governance** of the OpenAMI architecture, providing:
+The **Compliance Module** contains research on AI governance and regulatory compliance, including:
 
-- **Compliance Manifest ($\mathcal{CM}$)** management with Layer 0 Axioms enforcement
-- **Secure Process Nodes (SPNs)** with pre/post compliance checks
-- **Cryptographic State Tokens (CSTs)** for provenance and audit trails
-- **8-Step Evolution Protocol** compliance gates
-- **Never-Jettison Guarantee** verification ensuring AI_v1000 maintains original safety constraints
-- Traditional regulatory compliance tracking (EU AI Act, ISO 42001, ISO 27001, NIST AI RMF)
+- Compliance requirements specification and management (research)
+- Isolated execution environments with compliance checks (research)
+- Cryptographically signed state snapshots for audit trails (research)
+- Verified evolution process with compliance gates (research)
+- Constraint preservation across system updates (research)
+- Regulatory compliance mapping (EU AI Act, ISO 42001, ISO 27001, NIST AI RMF)
 
-This module ensures that the self-evolving AI system remains **compliant across generations**, preventing value drift while enabling continuous improvement.
+This module documents approaches for maintaining compliance in self-evolving AI systems.
 
 ---
 
 ## Table of Contents
 
-1. [Architecture Context](#architecture-context)
-2. [Key Capabilities](#key-capabilities)
+1. [Research Framework](#research-framework)
+2. [Research Areas](#research-areas)
 3. [Directory Structure](#directory-structure)
 4. [Documentation Index](#documentation-index)
 5. [Getting Started](#getting-started)
@@ -34,110 +35,112 @@ This module ensures that the self-evolving AI system remains **compliant across 
 
 ---
 
-## Architecture Context
+## Research Framework
 
-### OpenAMI Four-Layer Architecture
+### Proposed Architecture
+
+This module documents a research framework for trustworthy AI systems (see `/docs/openami/` for complete vision):
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ Layer 4: GOVERNANCE (This Module)                          │
-│ ✓ Compliance Manifest ($\mathcal{CM}$)                     │
-│ ✓ Layer 0 Axioms enforcement                               │
-│ ✓ Human oversight + regulatory reporting                   │
-│ ✓ Never-Jettison Guarantee                                 │
+│ GOVERNANCE LAYER (Compliance focus)                         │
+│ • Compliance requirements specification                     │
+│ • Immutable safety constraints                              │
+│ • Human oversight + regulatory reporting                    │
+│ • Constraint preservation across updates                    │
 └─────────────────────────────────────────────────────────────┘
          ↕ Compliance checks, evidence collection
 ┌─────────────────────────────────────────────────────────────┐
-│ Layer 3: INTELLIGENCE                                       │
-│ • 8-Step Evolution Protocol (gated by compliance)           │
-│ • Self-evolution engine                                     │
+│ INTELLIGENCE LAYER                                           │
+│ • Verified evolution process (with compliance gates)        │
+│ • Self-modification system (research)                       │
 └─────────────────────────────────────────────────────────────┘
-         ↕ SPNs enforce compliance at every step
+         ↕ Isolated environments enforce compliance
 ┌─────────────────────────────────────────────────────────────┐
-│ Layer 2: OPERATIONAL (SDS)                                  │
-│ • SPNs with compliance pre/post checks                      │
-│ • CSTs for audit trails                                     │
+│ OPERATIONAL LAYER                                            │
+│ • Isolated execution environments with compliance checks    │
+│ • Cryptographically signed state snapshots for audit        │
 └─────────────────────────────────────────────────────────────┘
-         ↕ Built on foundational guarantees
+         ↕ Built on safety constraints
 ┌─────────────────────────────────────────────────────────────┐
-│ Layer 1: FOUNDATION                                         │
-│ • Layer 0 Axioms (immutable safety constraints)             │
-│ • Genesis Kernel                                            │
-│ • Formal proof checker (Lean/Coq)                           │
+│ FOUNDATION LAYER                                             │
+│ • Immutable safety constraints (formal specification)       │
+│ • Core execution principles                                 │
+│ • Formal proof checker integration (Lean/Coq - research)    │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Never-Jettison Guarantee**: Ensures that even AI_v1000 proves compliance with the ORIGINAL Layer 0 axioms from v1.0.0, preventing unintended value drift across self-evolution generations.
+**Constraint Preservation**: Research approach where system updates must validate against original safety constraints, preventing value drift across iterations.
 
 ---
 
-## Key Capabilities
+## Research Areas
 
-### Core OpenAMI Primitives
+### Proposed Compliance Mechanisms
 
-#### 1. Compliance Manifest ($\mathcal{CM}$)
+#### 1. Compliance Requirements Specification
 
-Authoritative specification defining:
-- **Immutable sections**: Layer 0 Axioms, Genesis Kernel, proof checker config
-- **Updateable sections**: Evolutionary directives, compliance constraints (with proofs)
-- **Version management**: Cryptographic hash anchoring, multi-party signatures
-- **Never-Jettison verification**: Ensures immutable sections remain unchanged
+Formal specification defining safety and regulatory requirements:
+- **Immutable constraints**: Core safety requirements, proof checker configuration
+- **Updateable policies**: Operational directives, compliance rules (with validation)
+- **Version management**: Cryptographic signatures, multi-party approval
+- **Constraint preservation**: Ensures core requirements remain unchanged across updates
 
-**Status**: 📋 Specified → Implementation Q4 2025 Weeks 3-4
+**Status**: 📋 Research Phase
 
-#### 2. Layer 0 Axioms
+#### 2. Immutable Safety Constraints
 
-Formal safety constraints encoded in Lean/Coq:
-- Derived from EU AI Act Article 9 (high-risk AI requirements)
-- Enforced at every SPN execution
-- Violations trigger automatic Article 73 incident reporting
-- Immutable once signed into Compliance Manifest
+Formal safety requirements potentially encoded in proof assistants (Lean/Coq):
+- Derived from regulatory requirements (EU AI Act Article 9, etc.)
+- Validated before operations execute
+- Violations would trigger incident reporting (EU AI Act Article 73)
+- Immutable once formally approved
 
-**Status**: 📋 Specified → Formalization Q4 2025 Weeks 1-2
+**Status**: 📋 Research Phase
 
-#### 3. Secure Process Nodes (SPNs)
+#### 3. Isolated Execution Environments
 
-Wrapper pattern for modules with compliance enforcement:
-- Pre-condition: Validate operation against Layer 0 Axioms
-- Execution: Run original module function
-- Post-condition: Verify output satisfies axioms
-- Evidence: Create CST on success, block + incident on violation
+Proposed pattern for modules with compliance enforcement:
+- Pre-condition validation against safety constraints
+- Isolated execution of operations
+- Post-condition verification of outputs
+- Evidence generation on success, blocking on violations
 
-**Status**: 📋 Specified → Implementation Q4 2025 Weeks 7-8
+**Status**: 📋 Research Phase
 
-#### 4. Cryptographic State Tokens (CSTs)
+#### 4. Cryptographically Signed State Snapshots
 
-Blockchain-style provenance chain:
-- Signed state snapshots after each SPN operation
-- Links to Compliance Manifest version (proves which axioms applied)
+Blockchain-style provenance chain concept:
+- Signed state snapshots after significant operations
+- Links to requirements specification version
 - Enables audit trail reconstruction
-- 10-year retention (EU AI Act Article 12 requirement)
+- Would support regulatory retention requirements (EU AI Act Article 12)
 
-**Status**: 📋 Specified → Implementation Q4 2025 Week 6
+**Status**: 📋 Research Phase (basic audit trail operational at `base/backend/dataops/security/audit_trail.py`)
 
-#### 5. 8-Step Evolution Protocol
+#### 5. Verified Evolution Process
 
-Compliance gates at each evolution step:
-1. **Analyze**: Verify proposed changes don't violate axioms
-2. **Design**: Check architecture maintains compliance
-3. **Compile**: Scan generated code for safety violations
-4. **Test**: Run compliance test suite
-5. **Prove**: Generate Lean/Coq proofs of safety
-6. **Verify**: External proof validation
-7. **Log**: Create CST with evolution evidence
-8. **Activate**: Final check + human approval
+Proposed compliance gates for system evolution:
+1. **Analyze**: Identify improvement opportunities
+2. **Design**: Specify changes in detail
+3. **Compile**: Transform to executable operations
+4. **Test**: Empirical validation via test suites
+5. **Prove**: Generate formal safety proofs (research)
+6. **Verify**: External validation
+7. **Log**: Create audit entries
+8. **Activate**: Deploy with approval
 
-**Status**: 📋 Specified → Implementation Q4 2025 Weeks 9-11
+**Status**: 📋 Research Phase
 
-### Traditional Compliance Features
+### Regulatory Compliance Tracking
 
 - Control catalog mapped to EU AI Act, ISO 42001, ISO 27001, NIST AI RMF
-- Evidence registry (Git commits, CSTs, proofs, files, logs)
-- Risk assessment and incident management (Article 73 automation)
+- Evidence registry concepts (commits, audit logs, proofs, files)
+- Risk assessment and incident management frameworks
 - Gap analysis and remediation tracking
-- Audit packet export for regulators
+- Audit reporting for regulators
 
-**Status**: 📋 Specified → Implementation Q1 2026 Weeks 13-20
+**Status**: 📋 Documentation Phase (consolidated standards in `docs/research/consolidated/`)
 
 ---
 
@@ -148,281 +151,116 @@ compliance/
 ├── README.md                          # This file
 ├── __init__.py
 │
-├── backend/                           # Backend implementation (Q4 2025 - Q2 2026)
-│   ├── __init__.py
-│   ├── config/
-│   │   └── compliance_settings.py
-│   ├── models/                        # Pydantic data models
-│   │   ├── compliance_manifest.py     # $\mathcal{CM}$ schema
-│   │   ├── layer0_axioms.py          # Layer 0 Axioms
-│   │   ├── spn.py                    # SPN models
-│   │   ├── cst.py                    # CST models
-│   │   ├── evolution.py              # 8-step protocol
-│   │   └── controls.py               # Traditional compliance
-│   ├── services/                      # Business logic
-│   │   ├── manifest_service.py       # $\mathcal{CM}$ management
-│   │   ├── axiom_service.py          # Axiom validation
-│   │   ├── spn_service.py            # SPN wrapping
-│   │   ├── cst_service.py            # CST creation
-│   │   └── evolution_service.py      # Evolution orchestration
-│   ├── verification/                  # Formal verification
-│   │   ├── lean_integration.py       # Lean 4 prover
-│   │   ├── coq_integration.py        # Coq assistant
-│   │   └── proof_service.py          # Unified interface
-│   └── mcp/                           # MCP server
-│       ├── compliance_server.py      # FastMCP server
-│       └── tools/                    # MCP tools
-│           ├── get_compliance_manifest.py
-│           ├── validate_axiom.py
-│           ├── verify_never_jettison.py
-│           └── check_evolution_step.py
+├── backend/                           # Backend (research/future)
+│   ├── audit/                         # Audit trail system
+│   │   ├── core/                      # Core audit primitives
+│   │   ├── sources/                   # Audit sources (git, file, logs, etc.)
+│   │   ├── analyzers/                 # Analysis engines
+│   │   ├── collectors/                # Collection strategies
+│   │   └── reporting/                 # Output formatters
+│   └── mcp/                           # MCP server (future)
+│       └── audit/                     # Audit MCP tools
 │
 ├── docs/                              # Documentation
-│   ├── consolidated/                  # Regulatory mappings (✅ Complete)
-│   │   ├── EU_AI_Act/
-│   │   ├── ISO_42001/
-│   │   ├── ISO_27001/
-│   │   ├── NIST_AI_RMF/
-│   │   └── blueprint/                # Cross-standard mapping
-│   └── research/                      # Implementation docs
-│       ├── COMPLIANCE_BACKEND_SPEC.md          # ✅ Updated (OpenAMI v2.0)
-│       ├── CURRENT_IMPLEMENTATION_STATUS.md    # ✅ Updated
-│       ├── EXECUTIVE_ACTION_PLAN.md            # ✅ Updated
-│       ├── OPENAMI-COMPLIANCE-MAPPING.md       # ✅ New comprehensive mapping
-│       └── COMPLIANCE_GAP_ANALYSIS.md
+│   ├── consolidated/                  # Regulatory standard extracts
+│   │   ├── EU_AI_Act/                 # EU AI Act requirements
+│   │   ├── ISO_42001/                 # ISO 42001 (AI Management)
+│   │   ├── ISO_27001/                 # ISO 27001 (InfoSec)
+│   │   ├── NIST_AI_RMF/               # NIST AI Risk Management Framework
+│   │   └── blueprint/                 # Cross-standard mappings
+│   └── research/                      # Research documentation
+│       ├── OpenAMI/                   # Research framework docs
+│       ├── COMPLIANCE_BACKEND_SPEC.md # Backend specification (research)
+│       ├── CURRENT_IMPLEMENTATION_STATUS.md # Gap analysis
+│       └── COMPLIANCE_GAP_ANALYSIS.md # Remediation tracking
 │
-└── tests/                             # Test suite (Q1-Q2 2026)
-    ├── test_compliance_manifest.py
-    ├── test_layer0_axioms.py
-    ├── test_spn_wrapper.py
-    ├── test_cst_chain.py
-    └── test_evolution_protocol.py
+├── scripts/                           # Automation scripts
+│   └── ami-audit                      # Audit CLI wrapper (future)
+│
+└── tests/                             # Test suite
+    └── test_audit_core.py             # Audit system tests
 ```
 
 ---
 
 ## Documentation Index
 
-### Quick Links
+### Compliance Research
 
 | Document | Purpose | Status |
 |----------|---------|--------|
-| [COMPLIANCE_BACKEND_SPEC.md](docs/research/COMPLIANCE_BACKEND_SPEC.md) | Technical specification for backend implementation | ✅ Updated (v2.0) |
-| [CURRENT_IMPLEMENTATION_STATUS.md](docs/research/CURRENT_IMPLEMENTATION_STATUS.md) | Current capabilities and gaps | ✅ Updated |
-| [EXECUTIVE_ACTION_PLAN.md](docs/research/EXECUTIVE_ACTION_PLAN.md) | Budget, timeline, resource allocation | ✅ Updated |
-| [OPENAMI-COMPLIANCE-MAPPING.md](docs/research/OPENAMI-COMPLIANCE-MAPPING.md) | OpenAMI architecture → regulatory requirements traceability | ✅ Complete |
-| [COMPLIANCE_GAP_ANALYSIS.md](docs/research/COMPLIANCE_GAP_ANALYSIS.md) | Gap analysis and remediation plan | 🟡 In Progress |
+| [COMPLIANCE_BACKEND_SPEC.md](docs/research/COMPLIANCE_BACKEND_SPEC.md) | Backend specification (research) | 📋 Research |
+| [CURRENT_IMPLEMENTATION_STATUS.md](docs/research/CURRENT_IMPLEMENTATION_STATUS.md) | Gap analysis | 📋 Documentation |
+| [COMPLIANCE_GAP_ANALYSIS.md](docs/research/COMPLIANCE_GAP_ANALYSIS.md) | Remediation tracking | 📋 Documentation |
 
-### OpenAMI Documentation
+### Research Framework
 
-- [System Architecture](/docs/openami/architecture/system-architecture.md) - Complete 4-layer architecture
-- [What is OpenAMI?](/docs/openami/overview/what-is-openami.md) - Introduction
-- [Quickstart Guide](/docs/openami/guides/quickstart.md) - Developer onboarding
-- [Documentation Index](/docs/openami/DOCUMENTATION-INDEX.md) - Full documentation roadmap
+See `/docs/openami/` for the complete OpenAMI research framework:
+- [SPEC-VISION.md](/docs/openami/SPEC-VISION.md) - Research vision
+- [SPEC-ARCHITECTURE.md](/docs/openami/SPEC-ARCHITECTURE.md) - Four-layer architecture (research)
+- [GUIDE-FRAMEWORK.md](/docs/openami/GUIDE-FRAMEWORK.md) - Framework overview
 
 ### Regulatory Standards
 
-Complete consolidated documentation available in `compliance/docs/consolidated/`:
-- **EU AI Act** (Regulation 2024/1689)
-- **ISO/IEC 42001:2023** (AI Management System)
-- **ISO/IEC 27001:2022** (Information Security)
-- **NIST AI RMF 1.0** (AI Risk Management Framework)
+Consolidated regulatory documentation in `docs/research/consolidated/`:
+- **EU AI Act** (Regulation 2024/1689) - Legal requirements
+- **ISO/IEC 42001:2023** - AI Management System standard
+- **ISO/IEC 27001:2022** - Information Security Management
+- **NIST AI RMF 1.0** - AI Risk Management Framework
 
 ---
 
 ## Getting Started
 
-### Prerequisites
+### Current Status
 
-**Current Phase**: Specification & Planning (Q4 2025 start)
+**Phase**: 📋 Research & Documentation
 
-Implementation prerequisites (will be updated as development progresses):
-- Python 3.11+
-- Lean 4 theorem prover (for formal verification)
-- PostgreSQL 15+ (for compliance data)
-- Dgraph (for CST chain traversal)
-- Redis (for axiom caching)
+**What exists today**:
+- Regulatory standards consolidated in `docs/research/consolidated/`
+- Research framework documented in `/docs/openami/`
+- Basic audit trail at `base/backend/dataops/security/audit_trail.py`
+- Gap analysis and compliance mappings
 
-### Installation (Future - Q2 2026)
+**What does NOT exist**:
+- Compliance backend implementation
+- MCP server for compliance tools
+- Formal verification integration
+- Advanced audit mechanisms
 
-```bash
-# Clone repository
-git clone https://github.com/Independent-AI-Labs/OpenAMI.git
-cd OpenAMI/compliance
+### For Researchers
 
-# Install dependencies
-pip install -e .
+Review the research framework:
+1. See `/docs/openami/` for complete research vision
+2. Review `docs/research/OpenAMI/` for theoretical specifications
+3. Check consolidated regulatory standards in `docs/research/consolidated/`
 
-# Configure compliance backend
-cp default.env .env
-# Edit .env with your configuration
+### For Compliance Teams
 
-# Initialize Compliance Manifest
-python -m compliance.backend.scripts.init_manifest
-
-# Start MCP server
-python -m compliance.backend.mcp.run_mcp
-```
-
-### Current Status (2025-10-02)
-
-**Phase**: Specification & Documentation (✅ Complete)
-
-**Next Steps**:
-1. ✅ Complete architecture documentation
-2. ✅ Update compliance specs for OpenAMI integration
-3. ⭕ Formalize Layer 0 Axioms (Q4 2025 Weeks 1-2)
-4. ⭕ Implement Compliance Manifest (Q4 2025 Weeks 3-4)
-5. ⭕ Begin backend scaffolding (Q4 2025 Week 5)
+Use the consolidated documentation:
+1. EU AI Act requirements → `docs/research/consolidated/EU_AI_Act/`
+2. ISO 42001/27001 mappings → `docs/research/consolidated/ISO_*/`
+3. NIST AI RMF → `docs/research/consolidated/NIST_AI_RMF/`
+4. Gap analysis → `docs/research/COMPLIANCE_GAP_ANALYSIS.md`
 
 ---
 
-## MCP Server Usage
+## Regulatory Compliance Mappings
 
-### Overview (Specification)
+### Standards Coverage
 
-The Compliance MCP Server will expose compliance primitives via the Model Context Protocol, enabling:
-- AI assistants to validate operations against Layer 0 Axioms
-- Automated compliance checking during development
-- Self-service SPN wrapping for existing modules
-- Evolution protocol orchestration with compliance gates
+Consolidated documentation maps AMI-ORCHESTRATOR to regulatory standards:
 
-### Available Tools (Planned Q4 2025 - Q1 2026)
+| Framework | Documentation Status | Notes |
+|-----------|---------------------|-------|
+| EU AI Act (2024/1689) | ✅ Consolidated | Requirements extracted in `docs/research/consolidated/EU_AI_Act/` |
+| ISO/IEC 42001:2023 | ✅ Consolidated | AI Management System requirements mapped |
+| ISO/IEC 27001:2022 | ✅ Consolidated | Information Security controls documented |
+| NIST AI RMF 1.0 | ✅ Consolidated | Risk management framework mapped |
 
-#### OpenAMI Compliance Tools
+**Reality Check**: Consolidated documentation identifies requirements and proposes architectural approaches. Actual implementation and certification are separate efforts requiring significant additional work.
 
-```python
-# Get current Compliance Manifest
-manifest = mcp_client.call_tool("compliance.get_compliance_manifest")
-
-# Validate operation against Layer 0 Axioms
-result = mcp_client.call_tool("compliance.validate_axiom", {
-    "operation_descriptor": {
-        "module": "dataops.crud",
-        "function": "delete_dataset",
-        "params": {"dataset_id": "sensitive-data-001"}
-    }
-})
-
-# Verify Never-Jettison Guarantee
-verification = mcp_client.call_tool("compliance.verify_never_jettison", {
-    "current_version": "2.5.0",
-    "original_version": "1.0.0"
-})
-
-# Get CST provenance chain
-chain = mcp_client.call_tool("compliance.get_cst_chain", {
-    "spn_id": "dataops-crud-delete"
-})
-
-# Check evolution step compliance
-checkpoint = mcp_client.call_tool("compliance.check_evolution_step", {
-    "pipeline_id": "evolution-2024-10-02",
-    "step": "prove",
-    "artifacts": {"proof_file": "safety_proof.lean"}
-})
-
-# Wrap module as SPN
-spn_config = mcp_client.call_tool("compliance.wrap_spn", {
-    "module_path": "base.backend.dataops.crud",
-    "functions": ["create", "read", "update", "delete"],
-    "axiom_config": {
-        "pre_check": ["data_privacy", "access_control"],
-        "post_check": ["audit_trail_created"]
-    }
-})
-```
-
-#### Traditional Compliance Tools
-
-```python
-# Get control status
-control = mcp_client.call_tool("compliance.get_control", {
-    "control_id": "ISO27001-6.1.3"
-})
-
-# List compliance gaps
-gaps = mcp_client.call_tool("compliance.list_gaps", {
-    "standard": "EU_AI_Act",
-    "status": "OPEN"
-})
-
-# Submit evidence
-updated_control = mcp_client.call_tool("compliance.submit_evidence", {
-    "control_id": "ISO42001-8.3",
-    "evidence_ref": {
-        "source_type": "CST",
-        "location": "cst://abc123...",
-        "submitted_by": "compliance-bot"
-    }
-})
-
-# Export audit packet
-audit_packet = mcp_client.call_tool("compliance.export_audit_packet", {
-    "standard": "EU_AI_Act",
-    "include_openami": true
-})
-```
-
----
-
-## Development Roadmap
-
-### Timeline: Q4 2025 - Q2 2026
-
-**Total Budget**: €564k
-**Resources**: 1.5 FTE engineering + 0.5 FTE formal verification specialist
-
-### Phase 0: Foundation (Q4 2025, Weeks 1-4)
-- ✅ Complete OpenAMI architecture documentation
-- ⭕ Formalize Layer 0 Axioms in Lean/Coq
-- ⭕ Implement Compliance Manifest schema
-- ⭕ Create multi-party signature workflow
-
-### Phase 1: Core OpenAMI Backend (Q4 2025, Weeks 5-8)
-- ⭕ Integrate Lean/Coq proof verification
-- ⭕ Implement CST creation and chain verification
-- ⭕ Build SPN wrapper abstraction
-- ⭕ Create axiom enforcement service
-
-### Phase 2: Evolution Protocol & MCP (Q4 2025, Weeks 9-12)
-- ⭕ Implement 8-step evolution protocol orchestration
-- ⭕ Build MCP server with OpenAMI tools
-- ⭕ Create evolution step compliance checker
-- ⭕ Deploy SPN wrapper tool
-
-### Phase 3: Traditional Compliance (Q1 2026, Weeks 13-20)
-- ⭕ Implement control/evidence/risk models
-- ⭕ Build traditional MCP tools
-- ⭕ Create Article 73 incident automation
-- ⭕ Load blueprint mappings
-
-### Phase 4: Audit & Reporting (Q1-Q2 2026, Weeks 21-26)
-- ⭕ Build audit packet generator
-- ⭕ Automate evidence collection
-- ⭕ Comprehensive testing
-- ⭕ External audit dry-run
-
-**Current Status**: Phase 0 - Documentation complete, implementation starting Q4 2025
-
-See [EXECUTIVE_ACTION_PLAN.md](docs/research/EXECUTIVE_ACTION_PLAN.md) for detailed week-by-week breakdown.
-
----
-
-## Regulatory Compliance Status
-
-**Last Updated**: 2025-10-02
-
-| Framework | Coverage | Readiness | Target Certification |
-|-----------|----------|-----------|---------------------|
-| EU AI Act | 35% → 100% (architected) | 40% | Q2 2026 |
-| ISO/IEC 42001 | 40% → 100% (architected) | 45% | Q2 2026 |
-| ISO/IEC 27001 | 45% → 85% (architected) | 50% | Q1 2026 |
-| NIST AI RMF | 35% → 100% (architected) | 40% | Q2 2026 |
-
-**Key Achievement**: OpenAMI architecture provides 100% theoretical coverage for EU AI Act, ISO 42001, and NIST AI RMF. Implementation in progress.
-
-See [CURRENT_IMPLEMENTATION_STATUS.md](docs/research/CURRENT_IMPLEMENTATION_STATUS.md) for detailed capability breakdown.
+See `docs/research/COMPLIANCE_GAP_ANALYSIS.md` for honest gap assessment.
 
 ---
 
@@ -430,56 +268,49 @@ See [CURRENT_IMPLEMENTATION_STATUS.md](docs/research/CURRENT_IMPLEMENTATION_STAT
 
 ### For Developers
 
-1. **Read the specifications**:
-   - [COMPLIANCE_BACKEND_SPEC.md](docs/research/COMPLIANCE_BACKEND_SPEC.md) - Technical architecture
-   - [OpenAMI System Architecture](/docs/openami/architecture/system-architecture.md) - Core concepts
+Interested in implementing compliance features?
 
-2. **Follow the implementation roadmap**:
-   - Check [EXECUTIVE_ACTION_PLAN.md](docs/research/EXECUTIVE_ACTION_PLAN.md) for current priorities
-   - Claim tasks from the roadmap (create GitHub issue)
+1. **Review research documentation**:
+   - See `/docs/openami/` for research framework
+   - Check `docs/research/COMPLIANCE_BACKEND_SPEC.md` for backend concepts
+   - Review consolidated standards in `docs/research/consolidated/`
+
+2. **Current development focus**:
+   - Audit trail system (see `backend/audit/` for in-progress work)
+   - Regulatory mapping validation
+   - Gap analysis updates
 
 3. **Development standards**:
+   - Follow project guidelines in `/CLAUDE.md`
    - Python 3.11+ with type hints
-   - Pydantic models for all data structures
-   - 90%+ test coverage required
-   - All compliance checks must be auditable (create CSTs)
-
-4. **Testing requirements**:
-   - Unit tests for all services
-   - Integration tests for MCP tools
-   - Contract tests for OpenAMI primitives (axioms, CSTs, SPNs)
-   - Placeholder Lean/Coq verification for CI/CD
+   - Test coverage for all implementations
+   - Production-ready code only (no temporal markers or workarounds)
 
 ### For Compliance Experts
 
+Help improve regulatory mappings:
+
 1. **Review consolidated documentation**:
-   - Check `compliance/docs/consolidated/` for accuracy
-   - Validate regulatory mappings in [OPENAMI-COMPLIANCE-MAPPING.md](docs/research/OPENAMI-COMPLIANCE-MAPPING.md)
+   - Validate accuracy of standards in `docs/research/consolidated/`
+   - Suggest improvements to regulatory interpretations
 
 2. **Contribute to gap analysis**:
-   - Review current gaps in COMPLIANCE_GAP_ANALYSIS.md
-   - Suggest additional controls or evidence
+   - Review `COMPLIANCE_GAP_ANALYSIS.md`
+   - Identify additional requirements or controls
 
-3. **Participate in Compliance Manifest governance**:
-   - Review Layer 0 Axioms formalization
-   - Provide multi-party signature for Compliance Manifest updates
+3. **Validate mappings**:
+   - Check regulatory requirement mappings for accuracy
+   - Suggest additional evidence types
 
 ---
 
 ## Contact & Support
 
-- **Compliance Lead**: compliance@independentailabs.com
-- **Engineering Lead**: engineering@independentailabs.com
-- **Issues**: [GitHub Issues](https://github.com/Independent-AI-Labs/OpenAMI/issues?label=compliance)
-- **Documentation**: [OpenAMI Docs](https://github.com/Independent-AI-Labs/OpenAMI/tree/main/docs/openami)
+- **Issues**: Create GitHub issues for bugs or feature requests
+- **Documentation**: See `/docs/openami/` for research framework
 
 ---
 
 ## License
 
 See LICENSE file in repository root.
-
----
-
-**Last Updated**: 2025-10-02
-**Next Review**: After Phase 0 completion (Q4 2025 Week 4)

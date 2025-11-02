@@ -1,103 +1,106 @@
-# Compliance Backend & MCP Server Specification
+# Compliance Backend Specification (Research)
 
-**Version**: 2.0 (OpenAMI Architecture Aligned)
-**Last Updated**: 2025-10-02
-**Status**: 📋 Specification (Updated for 4-Layer Architecture)
+**Status**: 📋 Research Phase
+**Last Updated**: 2025-11-02
+
+> **⚠️ RESEARCH DOCUMENT**: This describes theoretical compliance backend architecture. Most features are not implemented. Current production capability: audit trail at `base/backend/dataops/security/audit_trail.py`.
 
 ## Purpose
 
-Define the architecture, data contracts, and integration points for the `compliance` module backend and its pluggable Compliance MCP server. The goal is to align implementation with:
-- The **OpenAMI 4-Layer Architecture** (Foundation → Operational → Intelligence → Governance)
-- **Layer 0 Axioms** and **Compliance Manifest ($\mathcal{CM}$)** primitives
-- **SPN-based compliance enforcement** and **CST-based provenance**
-- The **8-Step Evolution Protocol** with compliance checkpoints
-- Established `base/backend` patterns (Pydantic data models, service layer abstractions, FastMCP servers)
-- Compliance insights documented in `/docs/openami/`, `compliance/docs/consolidated/`, and `learning/`
+Document proposed architecture for a compliance backend that could support:
+- Regulatory compliance management (EU AI Act, ISO 42001/27001, NIST AI RMF)
+- Immutable safety constraint validation (research)
+- Cryptographically signed audit trails
+- Verified system evolution (research)
+- Integration with existing `base/backend` patterns (Pydantic, FastMCP)
+- Compliance research documented in `/docs/openami/` and `docs/consolidated/`
 
-## OpenAMI Architecture Context
+## Research Framework Context
 
-The compliance backend implements **Layer 4: Governance** of the OpenAMI architecture:
+> **Note**: This section describes theoretical research framework concepts. See `/docs/openami/` for complete framework documentation.
 
-### Four-Layer Architecture
+### Proposed Architecture Layers
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ Layer 4: GOVERNANCE (Compliance Module)                     │
-│ - Compliance Manifest ($\mathcal{CM}$)                      │
-│ - Layer 0 Axioms enforcement                                │
+│ GOVERNANCE LAYER (Compliance focus)                         │
+│ - Compliance requirements specification                     │
+│ - Immutable safety constraints                              │
 │ - Human oversight + regulatory reporting                    │
-│ - Never-Jettison Guarantee verification                     │
+│ - Constraint preservation verification                      │
 └─────────────────────────────────────────────────────────────┘
          ↕ Compliance checks, evidence collection
 ┌─────────────────────────────────────────────────────────────┐
-│ Layer 3: INTELLIGENCE (Self-Evolution Engine)               │
-│ - 8-Step Evolution Protocol (Analyze → Activate)            │
-│ - ML/AI model selection, fine-tuning                        │
-│ - Proof generation (Lean/Coq integration)                   │
+│ INTELLIGENCE LAYER                                           │
+│ - Verified evolution process (research)                     │
+│ - ML/AI model selection and training                        │
+│ - Proof generation (formal methods - research)              │
 └─────────────────────────────────────────────────────────────┘
-         ↕ SPNs enforce compliance at every step
+         ↕ Isolated environments enforce compliance
 ┌─────────────────────────────────────────────────────────────┐
-│ Layer 2: OPERATIONAL (SDS - Secure Distributed System)      │
-│ - SPNs (Secure Process Nodes) with compliance checks        │
-│ - CSTs (Cryptographic State Tokens) for provenance          │
-│ - OAMI Protocol for secure inter-component communication    │
+│ OPERATIONAL LAYER                                            │
+│ - Isolated execution environments with compliance checks    │
+│ - Cryptographically signed state snapshots for provenance   │
+│ - Secure inter-component communication                      │
 └─────────────────────────────────────────────────────────────┘
-         ↕ Built on foundational guarantees
+         ↕ Built on safety constraints
 ┌─────────────────────────────────────────────────────────────┐
-│ Layer 1: FOUNDATION                                          │
-│ - Layer 0 Axioms (immutable safety constraints)             │
-│ - Genesis Kernel (core execution principles)                │
-│ - Formal proof checker (Lean/Coq)                           │
+│ FOUNDATION LAYER                                             │
+│ - Immutable safety constraints (formal specification)       │
+│ - Core execution principles                                 │
+│ - Formal proof checker (Lean/Coq - research)                │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Never-Jettison Guarantee
+### Constraint Preservation Concept
 
-The compliance backend ensures that **AI_v1000 must still prove compliance with ORIGINAL Layer 0 axioms**, preventing value drift across self-evolution generations. This is verified through:
-- Immutable hash anchoring of Layer 0 Axioms in Compliance Manifest
-- CST-based provenance chains linking every evolution to original axioms
-- Formal verification proofs maintained across versions
+**Research Goal**: Ensure system updates validate against original safety constraints, preventing value drift. Proposed verification through:
+- Immutable hash anchoring of safety constraints
+- Cryptographic provenance chains linking updates to original constraints
+- Formal verification proofs (research phase)
 
-## Target Capabilities
+## Proposed Capabilities (Research)
 
-### Core OpenAMI Compliance Primitives
+> **Status**: All capabilities below are research concepts unless otherwise noted.
 
-1. **Compliance Manifest ($\mathcal{CM}$) Management**
-   - Maintains the authoritative Compliance Manifest with immutable and updateable sections
-   - **Immutable Sections**: Layer 0 Axioms, Genesis Kernel, Proof Checker configuration
-   - **Updateable Sections**: Evolutionary directives, compliance constraints (with proof of safety)
+### Compliance Framework Mechanisms
+
+1. **Compliance Requirements Specification Management**
+   - Proposed: Maintain compliance requirements specification with immutable and updateable sections
+   - **Immutable constraints**: Core safety requirements, proof checker configuration
+   - **Updateable policies**: Operational directives, compliance rules (with validation)
    - Multi-party signature verification and immutable hash anchoring
-   - Version management ensuring Never-Jettison Guarantee
+   - Version management ensuring constraint preservation
 
-2. **Layer 0 Axioms Enforcement**
-   - Stores formalized safety axioms (encoded in Lean/Coq)
-   - Provides axiom validation API for SPNs before operation execution
-   - Tracks axiom violations and triggers incident response (EU AI Act Article 73)
-   - Maintains immutable axiom provenance across system evolution
+2. **Immutable Safety Constraints** (Research)
+   - Concept: Store formalized safety requirements (potentially in Lean/Coq)
+   - Provide validation API before operation execution
+   - Track violations and trigger incident response (EU AI Act Article 73)
+   - Maintain immutable constraint provenance across updates
 
-3. **SPN (Secure Process Node) Compliance Integration**
-   - Wraps existing modules as SPNs with pre/post compliance checks
-   - Enforces compliance constraints at Layer 2 (Operational) boundary
-   - Blocks operations that would violate Layer 0 Axioms
-   - Generates compliance evidence for every SPN execution
+3. **Isolated Execution Environment Integration** (Research)
+   - Concept: Wrap modules with pre/post compliance checks
+   - Enforce compliance constraints at operational boundaries
+   - Block operations that would violate safety constraints
+   - Generate compliance evidence for every execution
 
-4. **CST (Cryptographic State Token) Provenance**
-   - Creates signed state snapshots linking operations to Compliance Manifest version
-   - Maintains cryptographic proof chains for audit trail (EU AI Act Article 12)
-   - Enables rollback to compliant states on axiom violations
-   - Provides evidence for "Never-Jettison" guarantee verification
+4. **Cryptographically Signed State Snapshot Provenance** (Research)
+   - Concept: Create signed state snapshots linking operations to requirements version
+   - Maintain cryptographic proof chains for audit trail (EU AI Act Article 12)
+   - Enable rollback to compliant states on violations
+   - Provide evidence for constraint preservation verification
 
-5. **8-Step Evolution Protocol Compliance**
-   - Integrates compliance checkpoints at each evolution step:
-     1. **Analyze**: Verify proposed changes don't conflict with Layer 0 Axioms
-     2. **Design**: Check architectural changes maintain compliance manifest
-     3. **Compile**: Validate generated code against safety constraints
-     4. **Test**: Run compliance test suite on evolved components
-     5. **Prove**: Generate Lean/Coq proofs of safety properties
+5. **Verified Evolution Process Compliance** (Research)
+   - Proposed compliance checkpoints for system evolution:
+     1. **Analyze**: Verify changes don't conflict with safety constraints
+     2. **Design**: Check architectural changes maintain compliance
+     3. **Compile**: Validate generated code against safety rules
+     4. **Test**: Run compliance test suite
+     5. **Prove**: Generate formal safety proofs (research)
      6. **Verify**: External verification of proofs and evidence
-     7. **Log**: Record evolution in CST chain with compliance attestation
-     8. **Activate**: Final axiom check before deployment
-   - Blocks evolution pipeline on compliance failure at any step
+     7. **Log**: Record evolution with compliance attestation
+     8. **Activate**: Final check before deployment
+   - Block evolution on compliance failure at any step
 
 ### Traditional Compliance Capabilities
 

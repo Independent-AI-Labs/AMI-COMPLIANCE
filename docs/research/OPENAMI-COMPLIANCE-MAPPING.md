@@ -1,28 +1,27 @@
-# OpenAMI Architecture → Compliance Requirements Mapping
-## Traceability Matrix for Regulatory Compliance
+# OpenAMI Research → Compliance Requirements Mapping
 
-**Document Version**: 1.0
-**Last Updated**: October 2, 2025
-**Maintainer**: Compliance Working Group + Architecture Team
-**Status**: **ACTIVE** - Foundation for compliance implementation
+**Status**: 📋 Research Framework Mapping
+**Last Updated**: November 2, 2025
+
+> **⚠️ RESEARCH DOCUMENT**: This maps a **theoretical research framework** (OpenAMI) to regulatory requirements. The architecture described is mostly unimplemented. Claims of "100% coverage" and "provable compliance" refer to theoretical architectural proposals, not operational systems.
 
 ---
 
-## Executive Summary
+## Purpose
 
-This document provides **complete traceability** from OpenAMI architectural components to specific regulatory requirements across:
+Map proposed OpenAMI research framework components to regulatory requirements:
 - EU AI Act (Regulation 2024/1689)
 - ISO/IEC 42001:2023 (AI Management System)
 - ISO/IEC 27001:2022 (Information Security Management)
 - NIST AI RMF 1.0 (Risk Management Framework)
 
-**Purpose**: Enable auditors, certifiers, and compliance teams to verify that OpenAMI architecture systematically addresses all applicable regulatory requirements.
+**Use**: Identify which proposed architectural components would address specific regulatory requirements if implemented.
 
-**Key Findings**:
-- ✅ **100% Coverage**: Every regulatory requirement has at least one architectural component addressing it
-- ✅ **Defense in Depth**: Most requirements have multiple layers of protection
-- ✅ **Provable Compliance**: Formal verification enables mathematical proofs of compliance
-- ✅ **Future-Proof**: Never-jettison guarantee ensures compliance persists across AI evolution
+**Reality Check**:
+- 🎯 **Theoretical Coverage**: Research framework proposes approaches for regulatory requirements
+- 📋 **Research Phase**: Architectural components are conceptual, not operational
+- ❌ **Not Certified**: No formal certification or audit has occurred
+- 🔬 **Long-term Vision**: Constraint preservation and formal verification are research goals
 
 ---
 
