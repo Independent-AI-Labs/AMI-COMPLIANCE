@@ -2,11 +2,11 @@
 
 import hashlib
 import json
-import uuid
 from datetime import UTC, datetime
 from enum import Enum
 from typing import Any
 
+from base.backend.utils.uuid_utils import uuid7
 from pydantic import BaseModel, Field
 
 
@@ -66,7 +66,7 @@ class AuditSignature(BaseModel):
 class AuditFinding(BaseModel):
     """Analysis finding from audit analyzers."""
 
-    finding_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    finding_id: str = Field(default_factory=uuid7)
     finding_type: str
     severity: AuditSeverity
     description: str
@@ -83,7 +83,7 @@ class AuditFinding(BaseModel):
 class AuditViolation(BaseModel):
     """Code quality or security violation."""
 
-    violation_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    violation_id: str = Field(default_factory=uuid7)
     rule: str
     severity: AuditSeverity
     message: str
@@ -101,7 +101,7 @@ class AuditRecord(BaseModel):
     """Immutable audit record representing a single auditable event."""
 
     # Identity
-    record_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    record_id: str = Field(default_factory=uuid7)
     record_hash: str = ""
 
     # Provenance metadata
